@@ -1,0 +1,413 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family:'Roboto', sans-serif;
+    background-color: black;
+}
+img{
+    max-width:100%;
+}
+/*utilities*/
+.uppercases-spacing{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none;
+}
+/*menu*/
+nav.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    height: 3.5rem;
+    background-color: white;
+}
+.icons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 25rem;
+}
+nav.menu a,nav.menu i{
+    color: black;
+    font-size: 1.3rem;
+
+}
+.small-logo{
+    height: 4rem;
+}
+.large-logo{
+    display: none;
+    height: 4rem;
+}
+.fa-search,.link-renew,.link-menu{
+    display: none;
+}
+nav.menu a.link-subscribe{
+    background-size: 200% 100%;
+    background-position:100% 0%;
+    background-image: linear-gradient(to left, black 50%, rgb(255, 208, 0) 50%);
+    transition: background-position .2s ease-in-out, color .2s ease-in-out;
+    background-color: black;
+    color:white;
+    padding:1.5rem;
+}
+nav.menu a.link-subscribe:hover{
+    background-position: 0% 0;
+    color: black;
+}
+@media (min-width: 768px){
+    .small-logo{
+        display: none;
+    }
+    .large-logo{
+        display: block;
+        height: 3rem;
+    }
+    .fa-search,.link-renew,.link-menu{
+        display: block;
+        margin: 0 2.5rem;
+    }
+}
+/*header*/
+
+.main-header{
+    color: white;
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header h1{
+    font-size: 3.8rem; 
+    color:white; 
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+}
+header p{
+    color: white;
+    font-size:1.5rem; 
+    text-align: center;
+    letter-spacing: 1px;
+}
+p.header-text span{
+    border-bottom: 3px solid rgb(255, 208, 0);
+}
+@media(min-width:768px){
+    header h1{
+        font-size: 4.5rem;
+    }
+}
+
+
+.yellow-bar{
+    background-color: rgb(255, 208, 0);
+    width: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    border-top: rgb(255, 208, 0)solid;
+    border-bottom: rgb(255, 208, 0);
+    border-left: rgb(255, 208, 0);
+    border-right: rgb(255, 208, 0);
+}
+
+/*main*/
+.news-container{
+    color: white;
+}
+.picks-container{
+    color: white;
+}
+@media(min-width: 768px){
+    .container-fluid{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 70%;
+        margin: 1rem auto;
+    }
+    .news-container{
+        flex-basis: 70%;
+    }
+    .picks-container{
+        flex-basis: 30%;
+    }
+}
+/*main-news*/
+.main-news{
+    position: relative;
+    /*parent/container should be relative*/
+    width: 44rem;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+@media(min-width:768px){
+    .main-news{
+        width: 60rem;
+    }
+}
+.main-news-text{
+    position:absolute;
+    top:8rem;
+    left:2rem;
+}
+.main-news-text h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color:white;
+}
+.main-news-text p.main-text{
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+p.news-icon{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+p.news-icon i{
+    margin-right: 1rem;
+}
+.main-news:hover img{
+    cursor: pointer;
+    transform: scale(1.25);
+}
+/*secondary-news*/
+.secondary-news{
+    width:44rem;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+.secondary-news img{
+    width: 43.5rem;
+}
+.secondary-news-text{
+    background-color: white;
+    color: black;
+    width: 39.5rem;
+    margin-top: -1.5rem;
+    padding: 2rem;
+}
+@media(min-width:768px){
+    .secondary-news-container{
+        display: flex;
+        width: 60.5rem;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 1rem;
+    }
+    .secondary-news-text{
+        width: 25.5rem;
+    }
+    .secondary-news-img{
+        width: 29.5rem;
+    }
+}
+.secondary-news-text h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color:gray;
+}
+.secondary-news-text h3 span{
+    font-weight: 400;
+}
+.secondary-news-text p.main-text{
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.secondary-news:hover img{
+    border-bottom: 3px solid rgb(255, 208, 0);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+/*todays picks*/
+.picks-container{
+    width: 90%;
+    margin: 1rem auto;
+}
+.picks-container h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-left:5px solid rgb(255, 208, 0);
+    padding-left: 2rem;
+    letter-spacing: 3px;
+}
+.single-pick{
+    display:flex;
+    margin: 1rem auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.single-pick img{
+    width: 8rem;
+
+}
+.single-pick-text{
+    flex-basis: 32rem;
+}
+.single-pick-text h3{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: white;
+}
+.single-pick-text p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+@media(min-width:768px){
+    .single-pick img{
+        width: 9rem;
+        height: 9;
+        margin-right: 2rem;
+    }
+}
+/*Sign up*/
+.sign-up-container input{
+    background-color: white;
+    color: gray;
+}
+.sign-up-container p{
+    color: white;
+}
+.sign-up-container{
+    position: relative;
+    /*parent/container should be relative*/
+    width: 100%;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+.sign-up-container img{
+    width: fit-content;
+    position: relative;
+}
+span .terms-of-use, .privacy-policy, .privacy-notice{
+    text-decoration: underline;
+}
+span .terms-of-use, .privacy-policy, .privacy-notice:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sign-up-header{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    top: .1rem;
+    line-height: 0rem;
+
+}
+.sign-up-header h4{
+    font-size: 1.75rem;
+    width: 60%;
+    line-height: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+}
+.sign-up-header p{
+    top: 4rem;
+}
+
+p.sign-up-text{
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 18rem;
+    width: 70%;
+    margin-left: 7rem;
+    font-weight: 550;
+    line-height: 1rem;
+    letter-spacing: 1px;
+}
+.email-input{
+    position: absolute;
+    color: white;
+    text-align: left;
+    top: 8rem;
+    margin-left: 4rem;
+}
+input{
+    width: 40rem;
+    background-color: white;
+    color: gray;
+    height: 4.5rem;
+    border: black solid 1px;
+    font-size: 1.5rem;
+    
+}
+.email-label{
+    font-size: 1.75rem;
+}
+@media(min-width:768px){
+    .sign-up-container{
+        margin-bottom: 5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: 100%;
+        height: 50rem;
+        color: white;
+    }
+    .sign-up-container img{
+        width: 100%;
+        height: 45rem;
+    }
+    p.sign-up-text{
+        position: absolute;
+        color: white;
+        text-align: center;
+        justify-content:left;
+        top: 18rem;
+        width: 70%;
+        margin-right:7rem;
+        font-weight: 550;
+        line-height: 1rem;
+        letter-spacing: 1px;
+    }
+p.link-sign-up{
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    top: 25rem;
+    width: 70%;
+    margin-left: 7rem;
+    font-weight: 550;
+    line-height: 1rem;
+    letter-spacing: 1px;
+}
+p a.link-sign-up{
+    position: absolute;
+    background-size: 200% 100%;
+    background-position:100% 0%;
+    background-image: linear-gradient(to left, black 50%, rgb(255, 208, 0) 50%);
+    transition: background-position .2s ease-in-out, color .2s ease-in-out;
+    background-color: black;
+    color:white;
+    padding:1.5rem;
+}
+p a.link-sign-up:hover{
+    position: absolute;
+    background-position: 0% 0;
+    color: black;
+    cursor: pointer;
